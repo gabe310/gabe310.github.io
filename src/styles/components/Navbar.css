@@ -1,0 +1,51 @@
+@import url('http://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/*base styles, the astrax below means for all of them*/
+* { 
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 100px;
+  border-bottom: solid 1px #d9d9d9;
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  background-color: white;
+  display: flex;
+  flex-direction: column; /*this makes it so that when it goes to phone size, the texts doesnt get squished*/
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Center children vertically */
+}
+
+.NavbarTitle{
+  margin-bottom: 5px;
+}
+
+.NavbarSection {
+  display: flex;
+}
+
+.NavbarSection a {
+  text-decoration: none;
+  padding: 5px 15px;
+  margin: 0 5px;
+  border-radius: 50px; /*this curves the border aka background color when hovered*/
+  transition: background-color 0.5s ease, transform 0.5s ease; /*delays the background color fade*/
+}
+
+.NavbarSection a:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+  color: black;
+}
+
+.NavbarSection a.active{  /*the a. for active makes it so that when i hover its gray, but when i click it, it overrides color to blue saying i slected it*/
+  background-color: #3498db;
+  color: white;
+}

@@ -17,3 +17,4 @@ function App() {
 }
 
 export default App;
+//to deploy app you do npm run deploy
