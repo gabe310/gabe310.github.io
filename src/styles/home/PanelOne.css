@@ -1,0 +1,81 @@
+
+.PanelOne {
+    padding: 64px 0 50px 75px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.PanelOneContainer {
+    display: flex;
+    align-items: center;
+}
+
+.PanelOneTextContainer {
+    margin-top: 80px;
+    margin-left: 50px;
+}
+#PanelOneTitle {
+    max-width: 450px;
+}
+#PanelOneSubtext {
+    max-width: 750px;
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.PanelOneImageContainer {
+    flex:auto;
+    display: flex;
+    justify-content:center;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 600px;
+}
+
+.PanelOneDivider {
+    margin: 50px 125px 0 50px;
+    border-bottom: solid 1px #d9d9d9;
+}
+
+
+.PanelOneImage {
+    max-width: 225px;
+}
+
+@media (max-width: 1200px) {
+    .PanelOneTextContainer {
+        margin-left: 0px;
+    }
+    .PanelOneImageContainer {
+        margin-right: 70px;
+    }
+}
+
+@media (max-width: 750px) {
+    .PanelOneImage {
+        max-width: 200px;
+    }
+    .PanelOne {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .PanelOneContainer {
+        flex-direction: column;
+    }
+    .PanelOneTextContainer {
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+    .PanelOneImageContainer {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .PanelOneImage {
+        padding-left: 0;
+    }
+    .PanelOneDivider {
+        margin-right: 75px;
+    }
+}
