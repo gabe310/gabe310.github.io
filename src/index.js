@@ -22,4 +22,4 @@ reportWebVitals();
 //i could also leave it like "homepage": "https://gabe310.github.io/(some repo name in github)" for another project to deploy
 //then i do the predeploy and deploy stuff, and type npm run build (if i want to, its ususally for safe common work place), 
 //then i do npm run deploy to deploy the site onto github pages. 
-//i think that buid folder if i were to make a frontend and backend folder, i leave the build outside of the front and backend folders
+//i think that build folder if i were to make a frontend and backend folder, i leave the build outside of the front and backend folders
