@@ -3,6 +3,7 @@ import '../styles/home/Home.css'
 import '../styles/home/PanelOne.css'
 import Gabe from '../assets/home/Gabe.png'
 import '../styles/home/PanelTwo.css'
+import quotesData from '../db/dataquote.json'
 
 const Home = () => {
     return (
@@ -39,25 +40,27 @@ const PanelOne = () => {
 }
 
 const PanelTwo = () => {
-    const [quotes, setQuotes] = useState([]);
+    //const [quotes, setQuotes] = useState([]); this is for the api request, but github cant use it
+    const [quotes, setQuotes] = useState(quotesData);
     const [current, setCurrent] = useState(0);
     const [fadeIn, setFadeIn] = useState(true);
    
-    useEffect(() => {
-        const fetchQuotes = async () => {
-            try {
-                const response = await fetch('/api/quotes');
-                const data = await response.json();
-                console.log(data[0].q);
-                setQuotes(data);
-            }
-            catch (error) {
-                console.error('error fetching quotes:', error);
-            }
-        };
+    // I dont have API key nor CORS policy header for access to deploy
+    // useEffect(() => {
+    //     const fetchQuotes = async () => {
+    //         try {
+    //             const response = await fetch('/api/quotes');
+    //             const data = await response.json();
+    //             console.log(data[0].q);
+    //             setQuotes(data);
+    //         }
+    //         catch (error) {
+    //             console.error('error fetching quotes:', error);
+    //         }
+    //     };
 
-        fetchQuotes();
-    }, []);
+    //     fetchQuotes();
+    // }, []);
 
     useEffect(() => {
         const interval = setInterval(() => {
