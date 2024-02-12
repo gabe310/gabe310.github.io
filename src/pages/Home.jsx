@@ -84,6 +84,7 @@ const PanelTwo = () => {
             )}
         </div>
     );
+    //i add another divisor???
 }
 
 
