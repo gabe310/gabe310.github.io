@@ -4,12 +4,14 @@ import '../styles/home/PanelOne.css'
 import Gabe from '../assets/home/Gabe.png'
 import '../styles/home/PanelTwo.css'
 import quotesData from '../db/dataquote.json'
+import '../styles/home/PanelThree.css'
 
 const Home = () => {
     return (
         <div className='Home'>
             <PanelOne/>
             <PanelTwo/>
+            <PanelThree/>
 
         </div>
     );
@@ -84,7 +86,59 @@ const PanelTwo = () => {
             )}
         </div>
     );
-    //i add another divisor???
+}
+
+const PanelThree = () => {
+    
+    return(
+        <div className='PanelThree'>
+            <div className='Title' id='PanelThreeTitle'>
+                Education and Hackathons:
+            </div>
+            <div className='Subtext' id='PanelThreeSubtext'>
+                <b>University of Western Ontario</b> - Expected to graduate May 2025
+            </div>
+            <div className='Subtext' id='PanelThreeText'>
+                <b>Relevant courses:</b>
+                <ul>
+                    <li><a href='https://www.csd.uwo.ca/misc/outlines/2021/2021-CS2210-B.pdf' target="_blank">Data Structures and Algorithms</a></li>
+                    <li><a href='https://www.csd.uwo.ca/misc/outlines/2022-Winter/CS_2208B_Winter2022.pdf' target="_blank">Computer Organization and Architecture</a></li>
+                    <li><a href='https://www.csd.uwo.ca/misc/outlines/2023-Winter/CS2212-b.pdf' target="_blank">Introduction to Software Engineering</a></li>
+                    <li><a href='https://www.csd.uwo.ca/misc/outlines/2020/2020-CS3357-A.pdf' target="_blank">Networks</a></li>
+                    <li><a href='https://www.csd.uwo.ca/misc/outlines/2021/2021-CS3305-A.pdf' target="_blank">Operating Systems</a></li>
+                    <li><a href='https://www.csd.uwo.ca/misc/outlines/2023-Winter/CS3377-b.pdf' target="_blank">Project Management</a></li>
+                </ul>
+            </div>
+
+            <div className='Subtext' id='PanelThreeSubtext'>
+                <b><a href='https://devpost.com/software/snapcycle-hyx3qv' target="_blank">McMaster MacHacks 3 - Best AI environmental Hack</a></b> <br /> Feb 2023
+            </div>
+            <div className='Subtext' id='PanelThreeText'>
+                <ul>
+                    <li>Developed web app SnapCycle allows users to scan various objects and learn how to properly dispose them.</li>
+                    <li>Integrated machine learning detection model using Pytorch that receives the user inputs.</li>
+                    <li>Designed website in React to implement a camera that uses Flask API sending data to the AI model and receive back
+                    information on the detected object.</li>
+                </ul>
+            </div>
+
+            <div className='Subtext' id='PanelThreeSubtext'>
+                <b><a href='https://devpost.com/software/inklink-qs6b1v' target="_blank">WDS Overhaul Hackathon - 2nd Place Winners</a></b> <br />Dec 2023
+            </div>
+            <div className='Subtext' id='PanelThreeText'>
+                <ul>
+                    <li>Simulated real life work environment, tasked to debug and implement functionalities for CEO and stakeholders.</li>
+                    <li>Created accessible tools such as text to speech, speech to text, and dictation functionalities, aiding those with impairments.</li>
+                    <li>Developed website using JavaScript, html, CSS, NodeJS, ExpressJS, MySQL, and google cloud APIs.</li>
+                </ul>
+            </div>
+
+
+            <div className='PanelThreeImageContainer'>
+            </div>
+
+        </div>
+    );
 }
 
 

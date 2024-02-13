@@ -1,0 +1,40 @@
+.PanelThree {
+    max-width: 1250px;
+
+    padding: 50px 75px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#PanelThreeTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 485px;
+
+    border-bottom: solid 2px #ddd;
+}
+
+#PanelThreeSubtext {
+    font-size: 20px;
+    max-width: 500px;
+    margin-bottom: 5px;
+}
+
+#PanelThreeText {
+    font-size: 18px;
+    max-width: 500px;
+    margin-bottom: 50px;
+}
+#PanelThreeText b {
+    font-size: 20px;
+    max-width: 500px;
+    margin-bottom: 50px;
+}
+
+.PanelThreeContainer {
+    display: flex;
+    position: relative;
+}
