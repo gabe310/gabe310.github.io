@@ -1,40 +1,68 @@
 .PanelThree {
     max-width: 1250px;
-
     padding: 50px 75px;
     margin: 0 auto;
-
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap; /* Ensure flex items wrap to the next line if necessary */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
-#PanelThreeTitle {
+.EducationContainer {
+    width: 100%; /* Set the width to 100% to fill the width of the page */
+    padding: 0 20px; /* Add padding to the sides */
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    max-width: 485px;
-
-    border-bottom: solid 2px #ddd;
+    flex-direction: row; /* Display children in a row */
+    border-bottom: solid 1px #d9d9d9;
 }
 
-#PanelThreeSubtext {
-    font-size: 20px;
-    max-width: 500px;
-    margin-bottom: 5px;
+.EducationSection {
+    max-width: 500px; /* Set the max width for education section */
+    margin-right: 20px; /* Add margin to separate from image container */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    padding-bottom: 20px; /* Add padding at the bottom */
 }
 
-#PanelThreeText {
-    font-size: 18px;
-    max-width: 500px;
-    margin-bottom: 50px;
+.PanelThreeImageContainer {
+    max-width: 220px; /* Adjusted to take up half of the panel width minus some margin */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    flex-shrink: 0; /* Prevent the image container from shrinking */
 }
-#PanelThreeText b {
-    font-size: 20px;
-    max-width: 500px;
-    margin-bottom: 50px;
+
+.PanelThreeImage {
+    margin-top: 50px;
+    max-width: 400px;
+    height: auto;
 }
 
 .PanelThreeContainer {
     display: flex;
-    position: relative;
+    flex-direction: column; /* Display in columns */
+    margin-top: 20px; /* Add margin at the top */
+}
+
+.SubtextBox {
+    border: 1px solid #ddd; /* Add border around the container */
+    padding: 20px; /* Add padding inside the container */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease; /* Add transition for transform, box-shadow, and border-radius */
+    border-radius: 10px; /* Round the corners of the border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0); /* Add initial box shadow */
+    cursor: pointer;
+}
+
+.SubtextBox:hover {
+    transform: scale(1.05); /* Scale the box slightly when hovered over */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box shadow when hovered over */
+    border-radius: 20px; /* Round the corners more when hovered over */
+}
+
+
+
+
+/* Media Query for smaller screens */
+@media (max-width: 907px) {
+    .PanelThreeImageContainer {
+        display: none; /* Hide the image container on smaller screens */
+    }
 }
