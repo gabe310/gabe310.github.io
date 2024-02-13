@@ -24,12 +24,16 @@
 }
 
 .NavbarTitle{
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 5px;
+  max-width: 100%;
+  text-align: center;
 }
 
 .NavbarSection {
   display: flex;
+  flex-wrap: wrap; /* Allow navbar sections to wrap to the next line on small screens */
+  justify-content: center;
 }
 
 .NavbarSection a {
@@ -49,4 +53,10 @@
 .NavbarSection a.active{  /*the a. for active makes it so that when i hover its gray, but when i click it, it overrides color to blue saying i slected it*/
   background-color: #3498db;
   color: white;
+}
+
+@media (max-width: 443px) {
+  .Navbar{
+    height: 150px;
+  }
 }

@@ -30,7 +30,7 @@ const PanelOne = () => {
                     <div className='Subtext' id='PanelOneSubtext'>
                         My name is Gabriel and I am a 3rd year computer science student in the pursuit of continuous learning. 
                         I have been adopting and embracing the student mindset of seeking knowledge and growth. 
-                        I am experienced in Java, C, Python, and Javascript, and look forward to mastering them as well as gaining new skills along the way. 
+                        I am experienced in Java, C, Python, and Javascript. I look forward to mastering them as well as gaining new skills along the way. 
                         I'm always striving for creativity and logical thinking in everyday life.
                     </div>
                 </div>
