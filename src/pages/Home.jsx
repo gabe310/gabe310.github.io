@@ -6,6 +6,7 @@ import '../styles/home/PanelTwo.css'
 import quotesData from '../db/dataquote.json'
 import '../styles/home/PanelThree.css'
 import western from '../assets/home/western-image.jpeg'
+import '../styles/home/PanelFour.css'
 
 const Home = () => {
     return (
@@ -20,12 +21,77 @@ const Home = () => {
 }
 
 const PanelOne = () => { 
+
+    useEffect(() => {
+        // JavaScript function for the console-style animation
+        function consoleText(words, id, colors) {
+            // Paste the consoleText function here
+            if (colors === undefined) colors = ['#fff'];
+            var visible = true;
+            var con = document.getElementById('console');
+            var letterCount = 1;
+            var x = 1;
+            var waiting = false;
+            var target = document.getElementById(id);
+            target.setAttribute('style', 'color:' + colors[0])
+
+            window.setInterval(function() {
+                if (letterCount === 0 && waiting === false) {
+                    waiting = true;
+                    target.innerHTML = words[0].substring(0, letterCount)
+                    window.setTimeout(function() {
+                        var usedColor = colors.shift();
+                        colors.push(usedColor);
+                        var usedWord = words.shift();
+                        words.push(usedWord);
+                        x = 1;
+                        target.setAttribute('style', 'color:' + colors[0])
+                        letterCount += x;
+                        waiting = false;
+                    }, 1000)
+                } 
+                else if (letterCount === words[0].length + 1 && waiting === false) {
+                    waiting = true;
+                    window.setTimeout(function() {
+                        x = -1;
+                        letterCount += x;
+                        waiting = false;
+                    }, 1000)
+                } 
+            
+                else if (waiting === false) {
+                    target.innerHTML = words[0].substring(0, letterCount)
+                    letterCount += x;
+                }
+            }, 120);
+            
+            window.setInterval(function() {
+                if (visible === true) {
+                    con.className = 'console-underscore hidden'
+                    visible = false;
+                } 
+                else {
+                    con.className = 'console-underscore'
+                    visible = true;
+                }
+            }, 400);
+        }
+
+        // Initiate the animation
+        consoleText(['HELLO WORLD!'], 'text', ['tomato', 'rebeccapurple', 'lightblue', 'lightgreen']);
+    }, []);
+
+
     return(
         <div className='PanelOne'>
             <div className='PanelOneContainer'>
                 <div className='PanelOneTextContainer'>
                     <div className='Title' id='PanelOneTitle'>
-                        HELLO WORLD!
+                        <div className='console-container'>
+                            <span id='text'></span>
+                            <div className='console-underscore' id='console'>&#95;</div>
+                        </div>
+             
                     </div>
                     <div className='Subtext' id='PanelOneSubtext'>
                         My name is Gabriel and I am a 3rd year computer science student in the pursuit of continuous learning. 
@@ -162,8 +228,28 @@ const PanelThree = () => {
 
 const PanelFour = () => {
     return(
-        <div>
-            test
+        <div className='PanelFour'>
+            <div className='Skills'>
+                <div className='Title'>
+                    Skills:
+                </div>
+            </div>
+            <div className='PanelFourContainer'>
+                <div className='Box'>Java</div>
+                <div className='Box'>Python</div>
+                <div className='Box'>C</div>
+                <div className='Box'>C++</div>
+                <div className='Box'>JavaScript</div>
+                <div className='Box'>HTML</div>
+                <div className='Box'>CSS</div>
+                <div className='Box'>NodeJS</div>
+                <div className='Box'>ExpressJS</div>
+                <div className='Box'>MongoDB</div>
+                <div className='Box'>React</div>
+                <div className='Box'>MySQL</div>
+                <div className='Box'>Git</div>
+
+            </div>
         </div>
     );
 }

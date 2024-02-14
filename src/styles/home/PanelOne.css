@@ -78,4 +78,29 @@
     .PanelOneDivider {
         margin-right: 75px;
     }
+    .console-container {
+
+    }
 }
+
+/* CSS for the console-style animation */
+.hidden {
+    opacity:0;
+}
+
+.console-container {
+    font-family: Khula;
+    font-size: 1.25em; /* Adjust font size as needed */
+    position: relative; /* Change position to relative */
+    color: white;
+    top: calc(100% - 50px); /* Adjust top position */
+    left: 5%; /* Adjust left position */
+}
+
+.console-underscore {
+    display: inline-block;
+    position: relative;
+    top: -0.1em; /* Adjust vertical position if needed */
+    margin-left: 5px; 
+}
+

@@ -1,0 +1,77 @@
+.PanelFour {
+    max-width: 1250px;
+    padding: 50px 75px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.Skills {
+    width: 100%; 
+    padding: 0 20px; 
+    display: flex;
+    flex-direction: row; 
+    border-bottom: solid 1px #d9d9d9;
+
+}
+
+.PanelFourContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+    margin-top: 20px;
+}
+
+.Box {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden; 
+    transition: box-shadow 0.3s ease; 
+}
+
+.Box::before,
+.Box::after {
+    content: '';
+    position: absolute;
+    transition: transform 0.3s ease; /* animation transition */
+    z-index: -1;
+}
+
+.Box::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; /* height  animation */
+    transform-origin: left;
+    transform: scaleX(0); 
+    background: linear-gradient(90deg, transparent, #3498db); /*gradient for glowing effect */
+}
+
+.Box::after {
+    top: 0;
+    right: 0;
+    width: 3px; /* width animation */
+    height: 100%;
+    transform-origin: top;
+    transform: scaleY(0); 
+    background: linear-gradient(transparent, #3498db); /*gradient for glowing effect */
+}
+
+.Box:hover::before {
+    transform: scaleX(1); 
+}
+
+.Box:hover::after {
+    transform: scaleY(1);
+}
+
+.Box:hover {
+    box-shadow: 0 0 10px 5px rgba(52, 152, 219, 0.5); /*glowing effect on hover */
+}
