@@ -1,5 +1,5 @@
 .PanelTwo {
-
+    flex-direction: column;
 }
 
 .ProjectBox {
@@ -8,7 +8,7 @@
     margin: 0 auto;
     border: 1px solid #ddd; /* Add border around the container */
     padding: 20px; /* Add padding inside the container */
-    margin-bottom: 20px; /* Add margin at the bottom */
+    margin-bottom: 50px; /* Add margin at the bottom */
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease; /* Add transition for transform, box-shadow, and border-radius */
     border-radius: 10px; /* Round the corners of the border */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0); /* Add initial box shadow */
