@@ -4,7 +4,7 @@
 
 .ProjectBox {
     width: 80%; /* Set initial width */
-    max-width: 600px; /* Set maximum width */
+    max-width: 1000px; /* Set maximum width, this changes the width of the box!! */
     margin: 0 auto;
     border: 1px solid #ddd; /* Add border around the container */
     padding: 20px; /* Add padding inside the container */
