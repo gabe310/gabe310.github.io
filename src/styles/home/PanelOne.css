@@ -46,7 +46,7 @@
 
 @media (max-width: 1200px) {
     .PanelOneTextContainer {
-        margin-left: 0px;
+        margin-left: 50px;
     }
     .PanelOneImageContainer {
         margin-right: 70px;
@@ -66,7 +66,10 @@
     }
     .PanelOneTextContainer {
         margin-top: 50px;
-        margin-left: 0px;
+        margin-left: 10px;
+
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .PanelOneImageContainer {
         margin-left: 0px;
@@ -78,9 +81,7 @@
     .PanelOneDivider {
         margin-right: 75px;
     }
-    .console-container {
 
-    }
 }
 
 /* CSS for the console-style animation */
@@ -94,13 +95,22 @@
     position: relative; /* Change position to relative */
     color: white;
     top: calc(100% - 50px); /* Adjust top position */
-    left: 5%; /* Adjust left position */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
 }
 
 .console-underscore {
     display: inline-block;
     position: relative;
     top: -0.1em; /* Adjust vertical position if needed */
-    margin-left: 5px; 
 }
 
+@media (max-width: 470px) {
+    .console-container{
+        font-size: 0.94em;
+    }
+    
+}

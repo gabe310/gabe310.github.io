@@ -1,6 +1,7 @@
 .PanelThree {
     max-width: 1250px;
-    padding: 50px 75px;
+
+    padding: 50px 30px; /*padding of the whole panel including the hackathon boxs*/
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap; /* Ensure flex items wrap to the next line if necessary */
@@ -64,5 +65,15 @@
 @media (max-width: 907px) {
     .PanelThreeImageContainer {
         display: none; /* Hide the image container on smaller screens */
+    }
+
+    .SubtextBox {
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-radius 0.2s ease; /* Adjust transition timing for smaller screens */
+    }
+
+    .SubtextBox:hover {
+        transform: scale(1.03); /* Adjust the scale on hover for smaller screens */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adjust box shadow on hover for smaller screens */
+        border-radius: 15px; /* Adjust border radius on hover for smaller screens */
     }
 }

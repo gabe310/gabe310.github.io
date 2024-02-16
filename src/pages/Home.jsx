@@ -167,10 +167,10 @@ const PanelThree = () => {
         <div className='PanelThree'>
             <div className='EducationContainer'>
                 <div className='EducationSection'>
-                    <div className='Title' id='PanelThreeTitle'>
+                    <div className='Title'>
                         Education and Hackathons:
                     </div>
-                    <div className='Subtext' id='PanelThreeSubtext'>
+                    <div className='Subtext'>
                         <b>University of Western Ontario</b> - Expected to graduate May 2025
                     </div>
                     <div className='Subtext' id='PanelThreeText'>
@@ -195,10 +195,10 @@ const PanelThree = () => {
 
             <div className='PanelThreeContainer'>
                 <div className='SubtextBox' onClick={() => handleClick('https://devpost.com/software/snapcycle-hyx3qv')}>
-                    <div className='Subtext' id='PanelThreeSubtext'>
+                    <div className='Subtext'>
                         <b><a href='https://devpost.com/software/snapcycle-hyx3qv' target="_blank">McMaster MacHacks 3 - Best AI environmental Hack</a></b> <br /> Feb 2023
                     </div>
-                    <div className='Subtext' id='PanelThreeText'>
+                    <div className='Subtext'>
                         <ul>
                             <li>Developed web app SnapCycle allows users to scan various objects and learn how to properly dispose them.</li>
                             <li>Integrated machine learning detection model using Pytorch that receives the user inputs.</li>
@@ -210,10 +210,10 @@ const PanelThree = () => {
                 </div>
                 
                 <div className='SubtextBox' onClick={() => handleClick('https://devpost.com/software/inklink-qs6b1v')}>
-                    <div className='Subtext' id='PanelThreeSubtext'>
+                    <div className='Subtext'>
                         <b><a href='https://devpost.com/software/inklink-qs6b1v' target="_blank">WDS Overhaul Hackathon - 2nd Place Winners</a></b> <br />Dec 2023
                     </div>
-                    <div className='Subtext' id='PanelThreeText'>
+                    <div className='Subtext'>
                         <ul>
                             <li>Simulated real life work environment, tasked to debug and implement functionalities for CEO and stakeholders.</li>
                             <li>Created accessible tools such as text to speech, speech to text, and dictation functionalities, aiding those with impairments.</li>
