@@ -3,6 +3,8 @@ import '../styles/projects/Projects.css';
 import '../styles/projects/PanelOne.css';
 import '../styles/projects/PanelTwo.css';
 
+import ReactGA from "react-ga4";
+
 const Projects = () => {
     return (
         <div className='Projects'>
@@ -13,6 +15,15 @@ const Projects = () => {
 }
 
 const PanelOne = () => {
+
+    useEffect(() => {
+        ReactGA.send({
+            hitType: 'pageview',
+            page: window.location.pathname,
+            title: 'projects page'
+        });
+
+    }, []);
 
     return(
         <div className='PanelOne'>

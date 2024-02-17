@@ -8,6 +8,8 @@ import '../styles/home/PanelThree.css'
 import western from '../assets/home/western-image.jpeg'
 import '../styles/home/PanelFour.css'
 
+import ReactGA from "react-ga4";
+
 const Home = () => {
     return (
         <div className='Home'>
@@ -23,6 +25,14 @@ const Home = () => {
 const PanelOne = () => { 
 
     useEffect(() => {
+        ReactGA.send({
+            hitType: 'pageview',
+            page: window.location.pathname,
+            title: 'About Me page'
+        });
+
+
+
         // JavaScript function for the console-style animation
         function consoleText(words, id, colors) {
             // Paste the consoleText function here

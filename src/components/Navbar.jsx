@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {NavLink} from 'react-router-dom';
 import '../styles/components/Navbar.css'
-import resumeFile from '../assets/resume/GabrielHernandez_Resume_copy.pdf';
+import resumeFile from '../assets/resume/Gabe_Resume.pdf';
+
+import ReactGA from "react-ga4";
 
 const Navbar = () => {
 
     const openPDF = () => {
         window.open(resumeFile, '_blank');
+
+        ReactGA.event({
+            category: 'User Interaction',
+            action: 'Open PDF',
+            label: 'Resume'
+        });
     };
  
     const scrollToTop = () => { //to make it scroll to top after clicking a link
@@ -14,7 +22,8 @@ const Navbar = () => {
           top: 0,
           behavior: 'smooth' //smooth scrolling animation
         });
-      };
+    };
+
 
     return(
         <div className='Navbar'>
